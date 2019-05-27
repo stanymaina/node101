@@ -30,7 +30,7 @@ class Books {
           author,
           description,
           quantity,
-          userId
+          user_id
         })
         .then(book => res.status(201).send({
           message: `Your book with the title ${title} has been created successfully `,

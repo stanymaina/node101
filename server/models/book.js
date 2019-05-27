@@ -29,19 +29,19 @@ module.exports = (sequelize, DataTypes) => {
         msg: 'Pease input a quantity'
       }
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'User',
         key: 'id',
-        as: 'userId',
+        as: 'user_id',
       }
     }
   }, {});
   Book.associate = function(models) {
     // associations can be defined here
     Book.belongsTo(models.User, {
-      foreignKey: 'userId',
+      foreignKey: 'user_id',
       onDelete: 'CASCADE'
     });
   };
